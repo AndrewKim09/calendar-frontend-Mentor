@@ -1,0 +1,215 @@
+:root{
+    --Purple: hsl(259, 100%, 65%);
+    --LightRed: hsl(0, 100%, 67%);
+    --White: hsl(0, 0%, 100%);
+    --OffWhite: hsl(0, 0%, 94%);
+    --LightGrey: hsl(0, 0%, 86%);
+    --SmokeyGrey: hsl(0, 1%, 44%);
+    --OffBlack: hsl(0, 0%, 8%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: PoppinsRegular;
+    src: url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: PoppinsItalic;
+    src: url(./assets/fonts/Poppins-Italic.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: poppinsExtraboldItalic;
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf) format("truetype");
+}
+@font-face {
+    font-family: poppinsExtrabold;
+    src: url(./assets/fonts/Poppins-ExtraBold.ttf) format("truetype");
+}
+@font-face {
+    font-family: poppinsBoldItalic;
+    src: url(./assets/fonts/Poppins-BoldItalic.ttf) format("truetype");
+}
+@font-face {
+    font-family: poppinsBold;
+    src: url(./assets/fonts/Poppins-Bold.ttf) format("truetype");
+}
+
+html{
+    background-color: var(--OffWhite);
+    font-family: PoppinsRegular;
+}
+
+button{
+    position: absolute;
+    right: 0;
+
+    background-color: black;
+
+    margin-top: 110px;
+    margin-right: 40px;
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+
+    border: none;
+
+    z-index: 2;
+
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.calendarBox{
+    background-color: var(--White);
+
+    position: relative;
+
+    width: 700px;
+    height: 500px;
+
+    margin: auto;
+    margin-top: 150px;
+    border-radius: 20px;
+
+    border-bottom-right-radius: 150px;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.inputBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    height: 100%;
+}
+.line{
+
+    position: absolute;
+
+    width: 90%;
+    height: 1px;
+    
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-top: 150px;
+    z-index: 1;
+
+
+    background-color: var(--LightGrey);
+}
+
+.dayBox, .monthBox, .yearBox{
+    p{
+        font-family: poppinsExtrabold;
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--SmokeyGrey);
+    }
+    input{
+        height: 45px;
+        width: 120px;
+
+        font-family: poppinsExtrabold;
+        font-size: 20px;
+
+
+        border-color: var(--LightGrey);
+        border-radius: 4px;
+        border-width: 1px;
+        border-style: solid;
+        
+        padding-left: 15px;
+    }
+
+    input:focus{
+        outline: none;
+        border-color: var(--Purple);
+
+    }
+}
+
+.outputBox{
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding-bottom: 40px;
+    padding-left: 40px;
+        font-family: poppinsExtraboldItalic;
+        font-size: 60px;
+}
+
+span{
+    color: var(--Purple);
+}
+
+@media screen and (max-width: 375px){
+
+    .inputBox{
+        width: 90%;
+        margin: auto;
+    }
+
+    .dayBox, .monthBox, .yearBox{
+        input{
+            width: 80px;
+        }
+    }
+
+
+    .calendarBox{
+        width: 300px;
+        height: 450px;
+        margin-top: 100px;
+
+        border-bottom-right-radius: 100px;
+    }
+
+
+
+    button{
+        margin-top: 120px;
+        margin-right: 120px;
+        height: 60px;
+        width: 60px;
+
+        background-color: var(--Purple);
+        
+    }
+
+    .arrowImage{
+        height: 25px;
+    }
+
+    .line{
+        width: 90%;
+        margin-left: 15px;
+        stroke-width: 5px;
+    }
+
+    .outputBox{
+        height: 200px;
+        padding-top:60px;
+        
+        font-size: 50px;
+        padding-left:20px;
+        p{
+            height: 50px;
+        }
+    }
+    
+}
+
+
+
+
+

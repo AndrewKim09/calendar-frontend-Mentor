@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <div class = "calendarBox">
+    <div class = "inputBox">
+      <div class="dayBox">
+        <p>DAY</p>
+        <input type="number" id="day" name="day" min="1" max="31">
+      </div>
+
+      <div class="monthBox">
+        <p>MONTH</p>
+        <input type="number" id="month" name="month" min="1" max="12">
+        
+      </div>
+
+      <div class="yearBox">
+        <p>YEAR</p>
+        <input type="number" id="year" name="year" min="1" max="">
+        
+      </div>
+
+    </div>
+
+    <div class = "outputBox">
+
+      <p><span id="yearOutput">--</span> years</p>
+
+      <p><span id="monthOutput">--</span> months</p>
+
+      <p><span  id="dayOutput">--</span> days</p>
+      
+
+    </div>
+
+    <button id="compute"><img class="arrowImage" src="assets/images/icon-arrow.svg"></button>
+
+      <div class="line">
+
+      </div> 
+
+
+
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Andrew Kim</a>.
+  </div>
+</body>
+
+<script src="./script.js"></script>
+</html>
