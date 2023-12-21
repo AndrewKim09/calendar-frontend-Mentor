@@ -49,7 +49,7 @@ button{
     position: absolute;
     right: 0;
 
-    background-color: black;
+    background-color: var(--Purple);
 
     margin-top: 110px;
     margin-right: 40px;
@@ -61,10 +61,15 @@ button{
 
     z-index: 2;
 
+    img{
+        height: 30px;
+    };
+
 }
 
 button:hover{
     cursor: pointer;
+    background-color: black;
 }
 
 .calendarBox{
@@ -109,12 +114,14 @@ button:hover{
 }
 
 .dayBox, .monthBox, .yearBox{
-    p{
+
+    .type{
         font-family: poppinsExtrabold;
         font-size: 10px;
-        letter-spacing: 3px;
+        letter-spacing: 4px;
         color: var(--SmokeyGrey);
     }
+    
     input{
         height: 45px;
         width: 120px;
@@ -152,7 +159,30 @@ span{
     color: var(--Purple);
 }
 
+.pError{
+    color: var(--LightRed);
+    font-family: poppinsExtraboldItalic;
+    font-size: 10px;
+    letter-spacing: 0px;
+    height: 1em;
+    
+}
+
+.error{
+    .type{
+        color: var(--LightRed);
+    }
+    input{
+        border-color: var(--LightRed);
+        border-width: 1px;
+    }
+}
+
 @media screen and (max-width: 375px){
+
+    .pError{
+        font-size: 8px;
+    }
 
     .inputBox{
         width: 90%;
